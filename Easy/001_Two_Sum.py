@@ -5,16 +5,16 @@
 
     You can return the answer in any order.
 '''
-
-def twoSum(nums, target):
-    d = {}
-    for i,n in enumerate(nums):
-        match = target - n
-        if match in d:
-            return d[match], i
-        else:
-            d[n] = i
+class Solution(object):
+    def twoSum(self, nums, target):
+        d = {}
+        for i,n in enumerate(nums):
+            match = target - n
+            if match in d:
+                return d[match], i
+            else:
+                d[n] = i
 
 nums = [2,7,11,15]
 target = 26
-print(twoSum(nums, target))
+print(Solution().twoSum(nums, target))
