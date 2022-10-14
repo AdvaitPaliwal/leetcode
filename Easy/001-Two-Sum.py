@@ -6,6 +6,7 @@
     You can return the answer in any order.
 """
 
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -13,19 +14,20 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        #initiates empty dictionary
+        # initiates empty dictionary
         d = dict()
-        #iterates through counter and nums pairs
-        for i,n in enumerate(nums):
-            #searches for sum pair
+        # iterates through counter and nums pairs
+        for i, n in enumerate(nums):
+            # searches for sum pair
             match = target - n
-            #returns indices if pair is found
+            # returns indices if pair is found
             if match in d:
                 return d[match], i
-            #adds pair to d
+            # adds pair to d
             else:
                 d[n] = i
 
-nums = [2,7,11,15]
+
+nums = [2, 7, 11, 15]
 target = 26
 print(Solution().twoSum(nums, target))

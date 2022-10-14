@@ -8,13 +8,14 @@
     Every close bracket has a corresponding open bracket of the same type.
 """
 
+
 class Solution(object):
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        d = {'(':')', '{':'}','[':']'}
+        d = {'(': ')', '{': '}', '[': ']'}
         stack = []
         for i in s:
             if i in d:
@@ -26,5 +27,3 @@ class Solution(object):
 
 s = "(]"
 print(Solution().isValid(s))
-        
-        

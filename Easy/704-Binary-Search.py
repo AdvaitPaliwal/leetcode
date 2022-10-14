@@ -4,6 +4,7 @@
     You must write an algorithm with O(log n) runtime complexity.
 """
 
+
 class Solution(object):
     def search(self, nums, target):
         """
@@ -24,6 +25,6 @@ class Solution(object):
         return -1
 
 
-nums = [-1,0,3,5,9,12]
+nums = [-1, 0, 3, 5, 9, 12]
 target = 9
-print(Solution().search(nums, target))    
+print(Solution().search(nums, target))
