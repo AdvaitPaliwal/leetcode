@@ -11,8 +11,10 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        s = "".join(i for i in s if i.isalnum()).lower()[::-1]
-        return s == s[::-1]
+        # reverse s without punctuation and all lowercase
+        new_s = "".join(i for i in s if i.isalnum()).lower()[::-1]
+        # check if new s == reversed new s
+        return new_s == new_s[::-1]
 
 
 s = "A man, a plan, a canal: Panama"

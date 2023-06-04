@@ -18,6 +18,8 @@ class Solution(object):
         """
         if not root:
             return None
+        # invert left and right recursively
+        # assign left root to inverted right root and right to inverted left root
         root.left, root.right = self.invertTree(
             root.right), self.invertTree(root.left)
         return root

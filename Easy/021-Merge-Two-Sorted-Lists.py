@@ -23,15 +23,21 @@ class Solution(object):
         :rtype: ListNode
         """
         dummy = tail = ListNode()
+        # iterate over both list nodes
         while l1 and l2:
+            # assign tail.next to smaller value
+            # increment respective linked list
             if l1.val < l2.val:
                 tail.next = l1
                 l1 = l1.next
             else:
                 tail.next = l2
                 l2 = l2.next
+            # increment combined linked list
             tail = tail.next
+        # assign whatever exists
         tail.next = l1 or l2
+        # prevents iterating backwards to get head of linked list
         return dummy.next
 
 

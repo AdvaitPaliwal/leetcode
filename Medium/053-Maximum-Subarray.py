@@ -11,9 +11,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        # Kadane's Algorithm
+        # sliding window problem
+        # need two sums to track current and max sum
         curSum = maxSum = nums[0]
+        # since curSum and maxSum are assigned to first index in nums
+        # iterate over nums[1:]
         for num in nums[1:]:
+            # get the currSum of current window
             curSum = max(num, curSum + num)
+            # use currSum to get maxSum
             maxSum = max(maxSum, curSum)
 
         return maxSum

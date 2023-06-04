@@ -13,12 +13,15 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
+        # typical sliding window problem
         profit = 0
         l = 0
         for r in range(len(prices)):
+            # if left price is greater than right, shift one over
             if prices[l] > prices[r]:
                 l = r
             else:
+                # get profit from sliding window and compare with last profit
                 profit = max(profit, prices[r] - prices[l])
         return profit
 

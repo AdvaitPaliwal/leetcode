@@ -15,13 +15,18 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        x = 1
+        # base case
         if len(nums) == 0:
             return 0
+        # skip first element
+        x = 1
+        # until n - 1 elements
         for i in range(len(nums)-1):
+            # if nums are not equal, move it up
             if(nums[i] != nums[i+1]):
                 nums[x] = nums[i+1]
                 x += 1
+        # return count of unique elements
         return x
 
 

@@ -20,10 +20,12 @@ class Solution(object):
         for i in s:
             if i in d:
                 stack.append(i)
+            # checks appended open brackets against dictionary pairs
             elif len(stack) == 0 or d[stack.pop()] != i:
                 return False
+        # handles case where every bracket is open
         return len(stack) == 0
 
 
-s = "(]"
+s = "([{})]"
 print(Solution().isValid(s))

@@ -15,7 +15,7 @@ class Solution(object):
             # return True if number is present in both nums and hashMap
             if i in hashMap:
                 return True
-            # else add i to hashMap with an arbitrary value
+            # else add i to hashMap with an arbitrary value deoniting that element is present
             else:
                 hashMap[i] = 1
 

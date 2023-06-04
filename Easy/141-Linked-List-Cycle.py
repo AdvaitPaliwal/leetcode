@@ -27,6 +27,7 @@ class Solution(object):
             fast = fast.next.next
             # takes time to catch up
             slow = slow.next
+            # if slow and fast meet, return True
             if slow == fast:
                 return True
         return False

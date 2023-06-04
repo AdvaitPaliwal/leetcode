@@ -18,7 +18,9 @@ class Solution(object):
         :type newColor: int
         :rtype: List[List[int]]
         """
+        # row and column size
         r, c = len(image), len(image[0])
+        # given color
         oldColor = image[sr][sc]
 
         def dfs(x, y):
@@ -27,10 +29,11 @@ class Solution(object):
             if x < 0 or x >= r or y < 0 or y >= c:
                 return
 
+            # if current pixel and old pixel don't match or if current pixel is the same as new
             if image[x][y] != oldColor or image[x][y] == newColor:
                 return
 
-            # old color to new color
+            # current color to new color
             image[x][y] = newColor
 
             # radiate in all four directions recursively
@@ -39,8 +42,10 @@ class Solution(object):
             dfs(x, y + 1)
             dfs(x, y - 1)
 
+        # first call
         dfs(sr, sc)
 
+        # return modified image
         return image
 
 
